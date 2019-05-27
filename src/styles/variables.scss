@@ -1,7 +1,7 @@
 // sidebar
 $menuText:#bfcbd9;
 $menuActiveText:#409EFF;
-$subMenuActiveText:#f4f4f5; //https://github.com/ElemeFE/element/issues/12951
+$subMenuActiveText:#bfcbd9; //https://github.com/ElemeFE/element/issues/12951
 
 $menuBg:#FFF;
 $menuColor:#666;
@@ -9,9 +9,9 @@ $menuHover:#F2F4F9;
 
 $mainBg:#F5F6FA;
 
-$subMenuColor:#7B7B7B;
 $subMenuBg:#FFF;
-$subMenuHover:#F5F6FA;
+$subMenuColor:#7B7B7B;
+$subMenuHover:#E8E8E8;
 
 $sideBarWidth: 210px;
 $navBarHeight:80px;
@@ -24,7 +24,10 @@ $navBarHeight:80px;
   subMenuActiveText: $subMenuActiveText;
   menuBg: $menuBg;
   menuHover: $menuHover;
+  menuColor: $menuColor;
+  mainBg: $mainBg;
   subMenuBg: $subMenuBg;
   subMenuHover: $subMenuHover;
+  subMenuColor: $subMenuColor;
   sideBarWidth: $sideBarWidth;
 }
