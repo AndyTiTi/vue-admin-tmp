@@ -53,11 +53,14 @@ export default {
 <style lang="scss" scoped>
 .navbar {
   color: #fff;
+  width: 100%;
   height: 80px;
   line-height: 80px;
   padding: 0 50px;
   overflow: hidden;
-  position: relative;
+  position: fixed;
+  top: 0;
+  z-index: 999;
   background: #2860FF;
   box-shadow: 0 1px 4px rgba(0,21,41,.08);
   .left-title{

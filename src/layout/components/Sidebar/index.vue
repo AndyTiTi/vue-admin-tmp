@@ -28,11 +28,6 @@ import variables from '@/styles/variables.scss'
 
 export default {
   components: { SidebarItem, Logo, Hamburger },
-  methods: {
-    toggleSideBar() {
-      this.$store.dispatch('app/toggleSideBar')
-    }
-  },
   computed: {
     ...mapGetters([
       'sidebar'
@@ -58,6 +53,11 @@ export default {
     isCollapse() {
       return !this.sidebar.opened
     }
+  },
+  methods: {
+    toggleSideBar() {
+      this.$store.dispatch('app/toggleSideBar')
+    }
   }
 }
 </script>
@@ -67,8 +67,6 @@ export default {
     line-height: 46px;
     height: 100%;
     cursor: pointer;
-    transition: background .3s;
-    -webkit-tap-highlight-color:transparent;
 
   &:hover {
      background: rgba(0, 0, 0, .025)

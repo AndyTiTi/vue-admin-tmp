@@ -12,7 +12,7 @@ module.exports = {
   extends: ['plugin:vue/recommended', 'eslint:recommended'],
 
   // add your custom rules here
-  //it is base on https://github.com/vuejs/eslint-config-vue
+  // it is base on https://github.com/vuejs/eslint-config-vue
   rules: {
     "vue/max-attributes-per-line": [2, {
       "singleline": 10,
@@ -72,7 +72,8 @@ module.exports = {
     'new-parens': 2,
     'no-array-constructor': 2,
     'no-caller': 2,
-    'no-console': 'off',
+    'no-console': process.env.NODE_ENV === 'production' ? 'error' : 'off',
+    'no-debugger': process.env.NODE_ENV === 'production' ? 'error' : 'off',
     'no-class-assign': 2,
     'no-cond-assign': 2,
     'no-const-assign': 2,
@@ -162,15 +163,10 @@ module.exports = {
       }
     }],
     'padded-blocks': [2, 'never'],
-    'quotes': [2, 'single', {
-      'avoidEscape': true,
-      'allowTemplateLiterals': true
-    }],
-    'semi': [2, 'never'],
-    'semi-spacing': [2, {
-      'before': false,
-      'after': true
-    }],
+    // 强制使用单引号
+    quotes: ['error', 'single'],
+    // 强制不使用分号结尾
+    semi: ['error', 'never'],
     'space-before-blocks': [2, 'always'],
     'space-before-function-paren': [2, 'never'],
     'space-in-parens': [2, 'never'],
